@@ -7,56 +7,113 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
 /*----------- BODY --------------*/
 body {
+    display: grid;
     font-size: 16px;
     font-family: Verdana, sans-serif;
 }
 
 
 /*----------- HEADER --------------*/
+
 header {
-    padding: .5rem 2%;
+    display: grid;
+    grid-template-columns: 51px auto 44px;
+    align-items: center;
+    padding: .5rem 2vw;
     background-color: red;
 }
-header h1 {margin: 0;}
-header h2 {margin: 0; font-weight: normal;}
+
+div#headerWrapper {
+    grid-row-start: 1;
+}
 
 /*----------- NAVIGATION --------------*/
-nav {
-    background-color: #666;
+div#navWrapper {
+    grid-row-start: 4;
 }
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-nav ul li {
-    float: left;
-    width: 25%;
-}
-nav ul li a {
-    display: block;
-    background-color: #444;
-    color: #eee;
-    border-left: 1px solid #777;
-    padding: .5rem 0;
-    text-decoration: none;
-    font-size: .9rem;
-    text-align: center;
-}
-nav ul li:first-child a {border-left: none;}
 
-nav ul li a:hover {
-    background-color: #eee;
-    color: #333;
+div#hamburger a, div#closex a {
+    display: block;
+    padding: .8rem 2vw;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    text-align: right;
+} // end nav button
+
+nav {
+    height: 100vh;
+    ul {
+        border-bottom: 1px solid #eee;
+        padding: 0;
+    }
+
+    ul li {
+        border-top: 1px solid #eee;
+        list-style: none;
+    }
+
+    ul li a{
+        display: block;
+        color: #333;
+        padding: .9rem 2vw;
+        text-decoration: none;
+        text-align: right;
+        text-decoration-style: none;
+        list-style: none;
+        background-color: red;
+    }
 }
-nav ul li.active a {
-    background-color: #000;
-    color: #fff;
-}
+
+div#closex a {margin-right: 2vw;}
+
 /*----------- MAIN --------------*/
+div#mainWrapper {
+    grid-row-start: 2;
+}
 main {
     padding: 0 2%;
     min-height: 10rem;
+
+    /*----------- COLUMNS ------------*/
+
+    div.flex {
+        display: flex;
+        flex-wrap: wrap;
+    } // end parent
+
+    div.flexsocial {
+        background: green;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+    } // end parent
+
+    div.flexsocial a {
+        flex-basis: 25%;
+        text-align: center;
+        color: black;
+        font-size: 3rem;
+        text-decoration: none;
+    }
+
+    .column {padding: 0 $gutter;}
+
+    .colorme {
+        background-color: red;
+    }
+
+    @for $i from 0 through 12 {
+        $w:($i/12) * 100%;
+        .small-#{$i} {flex-basis: $w;}
+    }// end loop
+
+    .jumbotron {
+        background-color: blue;
+        color: white;
+        p { font-size: 200%; padding: 2rem 0;}
+    }
+
 }
 
 div.social {
@@ -74,10 +131,13 @@ div.social a {
 }
 
 div.social a:hover {
-    color: orange;
+    color: $primaryColor;
 }
 
 /*----------- FOOTER --------------*/
+div#footerWrapper {
+    grid-row-start: 3;
+}
 footer {
     background-color: #ddd;
     padding: .5rem 2%;

@@ -321,70 +321,143 @@ html {
 
 /*----------- BODY --------------*/
 body {
+  display: grid;
   font-size: 16px;
   font-family: Verdana, sans-serif;
 }
 
 /*----------- HEADER --------------*/
 header {
-  padding: 0.5rem 2%;
+  display: grid;
+  grid-template-columns: 51px auto 44px;
+  align-items: center;
+  padding: 0.5rem 2vw;
   background-color: red;
 }
 
-header h1 {
-  margin: 0;
-}
-
-header h2 {
-  margin: 0;
-  font-weight: normal;
+div#headerWrapper {
+  grid-row-start: 1;
 }
 
 /*----------- NAVIGATION --------------*/
+div#navWrapper {
+  grid-row-start: 4;
+}
+
+div#hamburger a, div#closex a {
+  display: block;
+  padding: 0.8rem 2vw;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  text-align: right;
+}
+
 nav {
-  background-color: #666;
+  height: 100vh;
 }
-
 nav ul {
-  list-style-type: none;
+  border-bottom: 1px solid #eee;
   padding: 0;
-  margin: 0;
 }
-
 nav ul li {
-  float: left;
-  width: 25%;
+  border-top: 1px solid #eee;
+  list-style: none;
 }
-
 nav ul li a {
   display: block;
-  background-color: #444;
-  color: #eee;
-  border-left: 1px solid #777;
-  padding: 0.5rem 0;
-  text-decoration: none;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-nav ul li:first-child a {
-  border-left: none;
-}
-
-nav ul li a:hover {
-  background-color: #eee;
   color: #333;
+  padding: 0.9rem 2vw;
+  text-decoration: none;
+  text-align: right;
+  text-decoration-style: none;
+  list-style: none;
+  background-color: red;
 }
 
-nav ul li.active a {
-  background-color: #000;
-  color: #fff;
+div#closex a {
+  margin-right: 2vw;
 }
 
 /*----------- MAIN --------------*/
+div#mainWrapper {
+  grid-row-start: 2;
+}
+
 main {
   padding: 0 2%;
   min-height: 10rem;
+  /*----------- COLUMNS ------------*/
+}
+main div.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+main div.flexsocial {
+  background: green;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+main div.flexsocial a {
+  flex-basis: 25%;
+  text-align: center;
+  color: black;
+  font-size: 3rem;
+  text-decoration: none;
+}
+main .column {
+  padding: 0 2vw;
+}
+main .colorme {
+  background-color: red;
+}
+main .small-0 {
+  flex-basis: 0%;
+}
+main .small-1 {
+  flex-basis: 8.3333333333%;
+}
+main .small-2 {
+  flex-basis: 16.6666666667%;
+}
+main .small-3 {
+  flex-basis: 25%;
+}
+main .small-4 {
+  flex-basis: 33.3333333333%;
+}
+main .small-5 {
+  flex-basis: 41.6666666667%;
+}
+main .small-6 {
+  flex-basis: 50%;
+}
+main .small-7 {
+  flex-basis: 58.3333333333%;
+}
+main .small-8 {
+  flex-basis: 66.6666666667%;
+}
+main .small-9 {
+  flex-basis: 75%;
+}
+main .small-10 {
+  flex-basis: 83.3333333333%;
+}
+main .small-11 {
+  flex-basis: 91.6666666667%;
+}
+main .small-12 {
+  flex-basis: 100%;
+}
+main .jumbotron {
+  background-color: blue;
+  color: white;
+}
+main .jumbotron p {
+  font-size: 200%;
+  padding: 2rem 0;
 }
 
 div.social {
@@ -402,10 +475,14 @@ div.social a {
 }
 
 div.social a:hover {
-  color: orange;
+  color: #302b27;
 }
 
 /*----------- FOOTER --------------*/
+div#footerWrapper {
+  grid-row-start: 3;
+}
+
 footer {
   background-color: #ddd;
   padding: 0.5rem 2%;
@@ -439,6 +516,51 @@ footer {
     padding: 0.5rem 1rem;
   }
   /*----------- MAIN --------------*/
+  main {
+    /*----------- COLUMNS ------------*/
+  }
+  main .column {
+    padding: 0 2vw;
+  }
+  main .medium-0 {
+    flex-basis: 0%;
+  }
+  main .medium-1 {
+    flex-basis: 8.3333333333%;
+  }
+  main .medium-2 {
+    flex-basis: 16.6666666667%;
+  }
+  main .medium-3 {
+    flex-basis: 25%;
+  }
+  main .medium-4 {
+    flex-basis: 33.3333333333%;
+  }
+  main .medium-5 {
+    flex-basis: 41.6666666667%;
+  }
+  main .medium-6 {
+    flex-basis: 50%;
+  }
+  main .medium-7 {
+    flex-basis: 58.3333333333%;
+  }
+  main .medium-8 {
+    flex-basis: 66.6666666667%;
+  }
+  main .medium-9 {
+    flex-basis: 75%;
+  }
+  main .medium-10 {
+    flex-basis: 83.3333333333%;
+  }
+  main .medium-11 {
+    flex-basis: 91.6666666667%;
+  }
+  main .medium-12 {
+    flex-basis: 100%;
+  }
   /*----------- FOOTER --------------*/
 } /* end of media query */
 @media only screen and (min-width: 64rem) {
@@ -450,5 +572,50 @@ footer {
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
+  main {
+    /*----------- COLUMNS ------------*/
+  }
+  main .column {
+    padding: 0 2vw;
+  }
+  main .large-0 {
+    flex-basis: 0%;
+  }
+  main .large-1 {
+    flex-basis: 8.3333333333%;
+  }
+  main .large-2 {
+    flex-basis: 16.6666666667%;
+  }
+  main .large-3 {
+    flex-basis: 25%;
+  }
+  main .large-4 {
+    flex-basis: 33.3333333333%;
+  }
+  main .large-5 {
+    flex-basis: 41.6666666667%;
+  }
+  main .large-6 {
+    flex-basis: 50%;
+  }
+  main .large-7 {
+    flex-basis: 58.3333333333%;
+  }
+  main .large-8 {
+    flex-basis: 66.6666666667%;
+  }
+  main .large-9 {
+    flex-basis: 75%;
+  }
+  main .large-10 {
+    flex-basis: 83.3333333333%;
+  }
+  main .large-11 {
+    flex-basis: 91.6666666667%;
+  }
+  main .large-12 {
+    flex-basis: 100%;
+  }
   /*----------- FOOTER --------------*/
 } /* end of media query */
