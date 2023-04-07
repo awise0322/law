@@ -357,22 +357,29 @@ nav {
   height: 100vh;
 }
 nav ul {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #37a65e;
   padding: 0;
 }
 nav ul li {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #37a65e;
   list-style: none;
 }
 nav ul li a {
   display: block;
-  color: #333;
+  color: white;
   padding: 0.9rem 2vw;
   text-decoration: none;
   text-align: right;
   text-decoration-style: none;
   list-style: none;
-  background-color: red;
+  background-color: #013440;
+  font-size: large;
+}
+nav ul li a:hover {
+  color: #37a65e;
+}
+nav ul li.active a {
+  background-color: #025568;
 }
 
 div#closex a {
@@ -402,9 +409,12 @@ main div.flexsocial {
 main div.flexsocial a {
   flex-basis: 25%;
   text-align: center;
-  color: black;
+  color: #eee;
   font-size: 3rem;
   text-decoration: none;
+}
+main div.flexsocial a:hover {
+  color: #025951;
 }
 main .column {
   padding: 0 2vw;
@@ -472,10 +482,6 @@ div.social a {
   color: white;
   font-size: 3rem;
   text-decoration: none;
-}
-
-div.social a:hover {
-  color: #302b27;
 }
 
 /*----------- FOOTER --------------*/

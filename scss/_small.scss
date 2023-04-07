@@ -44,24 +44,32 @@ div#hamburger a, div#closex a {
 nav {
     height: 100vh;
     ul {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid $accentColor;
         padding: 0;
     }
 
     ul li {
-        border-top: 1px solid #eee;
+        border-top: 1px solid $accentColor;
         list-style: none;
     }
 
     ul li a{
         display: block;
-        color: #333;
+        color: white;
         padding: .9rem 2vw;
         text-decoration: none;
         text-align: right;
         text-decoration-style: none;
         list-style: none;
-        background-color: red;
+        background-color: $menuColor;
+        font-size: large;
+    }
+    ul li a:hover{
+        color: $accentColor;
+    }
+
+    ul li.active a {
+        background-color: lighten($menuColor, 8%);
     }
 }
 
@@ -92,11 +100,15 @@ main {
     div.flexsocial a {
         flex-basis: 25%;
         text-align: center;
-        color: black;
+        color: #eee;
         font-size: 3rem;
         text-decoration: none;
     }
 
+    div.flexsocial a:hover {
+        color: $primaryColor;
+    }
+        
     .column {padding: 0 $gutter;}
 
     .colorme {
@@ -130,9 +142,7 @@ div.social a {
     text-decoration: none;
 }
 
-div.social a:hover {
-    color: $primaryColor;
-}
+
 
 /*----------- FOOTER --------------*/
 div#footerWrapper {
