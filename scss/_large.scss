@@ -12,14 +12,20 @@ header, nav, main, footer {
 
 
 /*----------- NAVIGATION --------------*/
+nav ul li a {
+        padding: .2rem 1rem;
+        border-radius: 10px;
+        margin: .5rem ;
+}// end of anchor
 
-
+div#navWrapper nav {
+        ul {
+                margin: 0;
+        }
+}
 
 /*----------- MAIN --------------*/
 main {
-        /*----------- COLUMNS ------------*/
-        .column {padding: 0 $gutter;}
-
         @for $i from 0 through 12 {
         $w:($i/12) * 100%;
         .large-#{$i} {flex-basis: $w;}

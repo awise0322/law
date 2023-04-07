@@ -6,21 +6,61 @@
 
 
 /*----------- HEADER --------------*/
-
-
+header {
+grid-template-columns: 51px auto auto;
+    div#phone {
+        display: block;
+        justify-self: end;
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 1.5rem;
+        }// end anchor
+        a:hover {
+            color: $accentColor;
+        }
+    } // end phone
+    padding: 0;
+}// end header
 
 /*----------- NAVIGATION --------------*/
-    nav ul {margin-left: 2%;}
-    nav ul li {width: auto;}
-    nav ul li:first-child a {border-left: 1px solid #777;}
-    nav ul li:last-child a {border-right: 1px solid #777;}
-    nav ul li a{padding: .5rem 1rem;}
+div#hamburger, div#closex {display: none;}
+nav {
+height: auto;
+}// end of nav
 
+nav ul {
+    margin-left: 2%;
+    display: flex;
+    justify-content: end;
+    border: none;
+}
+
+nav ul li {
+    width: auto;
+    border: none;
+}
+
+nav ul li:first-child a {border-left: 1px solid #777;}
+nav ul li:last-child a {border-right: 1px solid #777;}
+nav ul li a{padding: .5rem 1rem;}
+
+/*----------- Stucture stuff goes here --------------*/
+div#headerWrapper {grid-row-start: 1;}
+div#navWrapper {grid-row-start: 2;}
+div#mainWrapper {grid-row-start: 3;}
+div#footerWrapper {grid-row-start: 4;}
+
+div#navWrapper nav {
+    ul {
+            margin: 0;
+    }
+}
 
 /*----------- MAIN --------------*/
 main {
     /*----------- COLUMNS ------------*/
-    .column {padding: 0 $gutter;}
 
     @for $i from 0 through 12 {
         $w:($i/12) * 100%;

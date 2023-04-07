@@ -332,11 +332,16 @@ header {
   grid-template-columns: 51px auto 44px;
   align-items: center;
   padding: 0.5rem 2vw;
-  background-color: red;
+  background-color: #013440;
+  color: white;
+}
+header div#phone {
+  display: none;
 }
 
 div#headerWrapper {
   grid-row-start: 1;
+  background: #013440;
 }
 
 /*----------- NAVIGATION --------------*/
@@ -355,6 +360,7 @@ div#hamburger a, div#closex a {
 
 nav {
   height: 100vh;
+  background-color: #025951;
 }
 nav ul {
   border-bottom: 1px solid #37a65e;
@@ -396,12 +402,33 @@ main {
   min-height: 10rem;
   /*----------- COLUMNS ------------*/
 }
+main .column {
+  padding: 0 2vw;
+}
 main div.flex {
   display: flex;
   flex-wrap: wrap;
+  padding: 1rem;
+}
+main div.flexcta {
+  background: red;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+main div.flexblog {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+main div.flexfaq {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: blue;
+  padding: 2vh;
 }
 main div.flexsocial {
-  background: green;
+  background: #025951;
   display: flex;
   flex-wrap: wrap;
   padding: 1rem 0;
@@ -414,13 +441,17 @@ main div.flexsocial a {
   text-decoration: none;
 }
 main div.flexsocial a:hover {
-  color: #025951;
-}
-main .column {
-  padding: 0 2vw;
+  color: #37a65e;
 }
 main .colorme {
-  background-color: red;
+  background-color: grey;
+  border-radius: 1px solid green;
+  padding: 1rem;
+}
+main .colorme1 {
+  background-color: tan;
+  border-radius: 1px solid green;
+  padding: 1rem;
 }
 main .small-0 {
   flex-basis: 0%;
@@ -470,6 +501,7 @@ main .jumbotron p {
   padding: 2rem 0;
 }
 
+/*----------- Socials --------------*/
 div.social {
   background-color: black;
   display: flex;
@@ -484,15 +516,45 @@ div.social a {
   text-decoration: none;
 }
 
+/*----------- CTA Button --------------*/
+.flexbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.flexbutton h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border-radius: 4px;
+  text-align: center;
+  padding: 2px 4px;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.flexbutton a {
+  text-decoration: none;
+}
+
+.flexbutton:hover h4 {
+  background-color: #0056b3;
+}
+
 /*----------- FOOTER --------------*/
 div#footerWrapper {
   grid-row-start: 3;
+  background-color: #013440;
 }
 
 footer {
-  background-color: #ddd;
+  background-color: #013440;
   padding: 0.5rem 2%;
   text-align: center;
+  color: white;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
@@ -505,12 +567,39 @@ footer {
 @media only screen and (min-width: 35rem) {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
+  header {
+    grid-template-columns: 51px auto auto;
+    padding: 0;
+  }
+  header div#phone {
+    display: block;
+    justify-self: end;
+  }
+  header div#phone a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  header div#phone a:hover {
+    color: #37a65e;
+  }
   /*----------- NAVIGATION --------------*/
+  div#hamburger, div#closex {
+    display: none;
+  }
+  nav {
+    height: auto;
+  }
   nav ul {
     margin-left: 2%;
+    display: flex;
+    justify-content: end;
+    border: none;
   }
   nav ul li {
     width: auto;
+    border: none;
   }
   nav ul li:first-child a {
     border-left: 1px solid #777;
@@ -521,12 +610,25 @@ footer {
   nav ul li a {
     padding: 0.5rem 1rem;
   }
+  /*----------- Stucture stuff goes here --------------*/
+  div#headerWrapper {
+    grid-row-start: 1;
+  }
+  div#navWrapper {
+    grid-row-start: 2;
+  }
+  div#mainWrapper {
+    grid-row-start: 3;
+  }
+  div#footerWrapper {
+    grid-row-start: 4;
+  }
+  div#navWrapper nav ul {
+    margin: 0;
+  }
   /*----------- MAIN --------------*/
   main {
     /*----------- COLUMNS ------------*/
-  }
-  main .column {
-    padding: 0 2vw;
   }
   main .medium-0 {
     flex-basis: 0%;
@@ -577,13 +679,15 @@ footer {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
+  nav ul li a {
+    padding: 0.2rem 1rem;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+  div#navWrapper nav ul {
+    margin: 0;
+  }
   /*----------- MAIN --------------*/
-  main {
-    /*----------- COLUMNS ------------*/
-  }
-  main .column {
-    padding: 0 2vw;
-  }
   main .large-0 {
     flex-basis: 0%;
   }

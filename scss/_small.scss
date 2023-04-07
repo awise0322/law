@@ -20,11 +20,16 @@ header {
     grid-template-columns: 51px auto 44px;
     align-items: center;
     padding: .5rem 2vw;
-    background-color: red;
-}
+    background-color: $menuColor;
+    color: white;
+    div#phone {
+        display: none;
+    }
+}// end of header
 
 div#headerWrapper {
     grid-row-start: 1;
+    background: $menuColor;
 }
 
 /*----------- NAVIGATION --------------*/
@@ -43,6 +48,7 @@ div#hamburger a, div#closex a {
 
 nav {
     height: 100vh;
+    background-color: $primaryColor;
     ul {
         border-bottom: 1px solid $accentColor;
         padding: 0;
@@ -85,13 +91,39 @@ main {
 
     /*----------- COLUMNS ------------*/
 
+    .column {
+        padding: 0  $gutter;
+    }
+
     div.flex {
         display: flex;
         flex-wrap: wrap;
+        padding: 1rem;
     } // end parent
 
+    div.flexcta {
+        background: red;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+    } // end parent
+
+    div.flexblog {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+    } // end parent
+
+    div.flexfaq {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: blue;
+        padding: 2vh;
+    } // end parent
+
+ 
     div.flexsocial {
-        background: green;
+        background: $primaryColor;
         display: flex;
         flex-wrap: wrap;
         padding: 1rem 0;
@@ -106,13 +138,21 @@ main {
     }
 
     div.flexsocial a:hover {
-        color: $primaryColor;
+        color: $accentColor;
     }
         
-    .column {padding: 0 $gutter;}
+  
 
     .colorme {
-        background-color: red;
+        background-color: grey;
+        border-radius: 1px solid green;
+        padding: 1rem;
+    }
+
+    .colorme1 {
+        background-color: tan;
+        border-radius: 1px solid green;
+        padding: 1rem;
     }
 
     @for $i from 0 through 12 {
@@ -128,6 +168,7 @@ main {
 
 }
 
+    /*----------- Socials --------------*/
 div.social {
     background-color: black;
     display: flex;
@@ -142,16 +183,46 @@ div.social a {
     text-decoration: none;
 }
 
+/*----------- CTA Button --------------*/
 
+.flexbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .flexbutton h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 2px 4px;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+  }
 
+  .flexbutton a {
+    text-decoration: none;
+  }
+  
+  .flexbutton:hover h4 {
+    background-color: #0056b3;
+  }
+  
+      
 /*----------- FOOTER --------------*/
 div#footerWrapper {
     grid-row-start: 3;
+    background-color: $menuColor;
 }
 footer {
-    background-color: #ddd;
+    background-color: $menuColor;
     padding: .5rem 2%;
     text-align: center;
+    color: white;
 }
 
 
