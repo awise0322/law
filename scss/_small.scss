@@ -42,7 +42,7 @@ div#hamburger a, div#closex a {
     padding: .8rem 2vw;
     font-size: 1.5rem;
     text-decoration: none;
-    color: black;
+    color: white;
     text-align: right;
 } // end nav button
 
@@ -92,41 +92,19 @@ main {
     /*----------- COLUMNS ------------*/
 
     .column {
-        padding: 0  $gutter;
+        padding: 0 $gutter;
     }
+      
 
     div.flex {
         display: flex;
         flex-wrap: wrap;
-        padding: 1rem;
-    } // end parent
-
-    div.flexcta {
-        background: red;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 1rem;
-    } // end parent
-
-    div.flexblog {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 1rem;
-    } // end parent
-
-    div.flexfaq {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: blue;
-        padding: 2vh;
-    } // end parent
-
- 
-    div.flexsocial {
-        background: $primaryColor;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 1rem 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        gap: 10px;
+        border: 1px solid black;
+        width: 100%;
+        justify-content: center;
     } // end parent
 
     div.flexsocial a {
@@ -147,6 +125,14 @@ main {
         background-color: grey;
         border-radius: 1px solid green;
         padding: 1rem;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .colorme img {
+        display: block; /* make the image a block-level element */
+        margin: 0 auto; /* center the image horizontally */
+        max-width: 100%; /* make the image responsive */
     }
 
     .colorme1 {
@@ -165,10 +151,30 @@ main {
         color: white;
         p { font-size: 200%; padding: 2rem 0;}
     }
+      
+    .my-button {
+        background-color: $menuColor; /* set the button's background color */
+        border: none; /* remove the button's border */
+        color: white; /* set the button's text color */
+        padding: 12px 24px; /* set the button's padding */
+        text-align: center; /* center the button's text */
+        text-decoration: none; /* remove the button's underline */
+        display: inline-block; /* display the button as an inline-block element */
+        font-size: 12px; /* set the font size of the button's text */
+        margin: 10px; /* set the button's margin */
+        cursor: pointer; /* add a pointer cursor to the button */
+        border-radius: 10px; /* add border-radius to create rounded corners */
+      }
+      
+      .my-button:hover {
+        background-color: #3e8e41; /* change the button's background color on hover */
+      }
 
-}
 
-    /*----------- Socials --------------*/
+}// end of main
+
+
+/*----------- Socials --------------*/
 div.social {
     background-color: black;
     display: flex;
