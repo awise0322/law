@@ -91,7 +91,7 @@ main {
 
     /*----------- COLUMNS ------------*/
 
-    .column {
+    div.column {
         padding: 0 $gutter;
     }
       
@@ -101,7 +101,6 @@ main {
         flex-wrap: wrap;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        gap: 10px;
         border: 1px solid black;
         width: 100%;
         justify-content: center;

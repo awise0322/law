@@ -402,7 +402,7 @@ main {
   min-height: 10rem;
   /*----------- COLUMNS ------------*/
 }
-main .column {
+main div.column {
   padding: 0 2vw;
 }
 main div.flex {
@@ -410,7 +410,6 @@ main div.flex {
   flex-wrap: wrap;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  gap: 10px;
   border: 1px solid black;
   width: 100%;
   justify-content: center;
