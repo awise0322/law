@@ -62,6 +62,17 @@ div#navWrapper nav {
 main {
     /*----------- COLUMNS ------------*/
 
+    div.flex {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border: 1px solid black;
+        width: 100%;
+        gap: 1vw;
+        justify-content: center;
+    } // end parent
+    
     @for $i from 0 through 12 {
         $w:($i/12) * 100%;
         .medium-#{$i} {flex-basis: $w;}

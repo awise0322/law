@@ -634,6 +634,16 @@ footer {
   main {
     /*----------- COLUMNS ------------*/
   }
+  main div.flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 1px solid black;
+    width: 100%;
+    gap: 1vw;
+    justify-content: center;
+  }
   main .medium-0 {
     flex-basis: 0%;
   }
