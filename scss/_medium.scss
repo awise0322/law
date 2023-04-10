@@ -21,6 +21,9 @@ grid-template-columns: 51px auto auto;
             color: $accentColor;
         }
     } // end phone
+    h1 {
+        padding: 1rem;
+    }
     padding: 0;
 }// end header
 

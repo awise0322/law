@@ -338,6 +338,9 @@ header {
 header div#phone {
   display: none;
 }
+header h1 {
+  padding: 1rem;
+}
 
 div#headerWrapper {
   grid-row-start: 1;
@@ -575,6 +578,9 @@ footer {
   }
   header div#phone a:hover {
     color: #37a65e;
+  }
+  header h1 {
+    padding: 1rem;
   }
   /*----------- NAVIGATION --------------*/
   div#hamburger, div#closex {
