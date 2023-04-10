@@ -385,7 +385,7 @@ nav ul li a:hover {
   color: #37a65e;
 }
 nav ul li.active a {
-  background-color: #0386a4;
+  background-color: #838383;
 }
 
 div#closex a {
@@ -429,7 +429,7 @@ main div.flexsocial {
   color: #eee;
   font-size: 3rem;
   text-decoration: none;
-  background-color: #37a65e;
+  background-color: #025951;
 }
 main div.flexsocial a:hover {
   color: #013440;
