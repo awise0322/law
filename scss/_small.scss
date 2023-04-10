@@ -78,7 +78,12 @@ nav {
     }
 
     ul li.active a {
-        background-color: lighten(grey, 1%);
+        background-color: lighten(grey, 10%);
+        color: black;
+    }
+
+    ul li.active a:hover {
+        color: white;
     }
 }
 

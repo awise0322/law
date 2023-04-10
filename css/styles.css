@@ -388,7 +388,11 @@ nav ul li a:hover {
   color: #37a65e;
 }
 nav ul li.active a {
-  background-color: #838383;
+  background-color: #9a9a9a;
+  color: black;
+}
+nav ul li.active a:hover {
+  color: white;
 }
 
 div#closex a {
