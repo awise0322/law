@@ -385,7 +385,7 @@ nav ul li a:hover {
   color: #37a65e;
 }
 nav ul li.active a {
-  background-color: #025568;
+  background-color: #0386a4;
 }
 
 div#closex a {
@@ -410,36 +410,45 @@ main div.flex {
   flex-wrap: wrap;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border: 1px solid black;
   width: 100%;
   justify-content: center;
 }
 main div.flexsocial a {
-  flex-basis: 25%;
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   color: #eee;
   font-size: 3rem;
   text-decoration: none;
+  align-content: center;
+}
+main div.flexsocial {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #eee;
+  font-size: 3rem;
+  text-decoration: none;
+  background-color: #37a65e;
 }
 main div.flexsocial a:hover {
-  color: #37a65e;
+  color: #013440;
 }
 main .colorme {
   background-color: grey;
-  border-radius: 1px solid green;
-  padding: 1rem;
+  padding: 0;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #333;
+  font-size: smaller;
+  margin: 0;
+}
+main .colorme p {
+  margin: 1rem;
 }
 main .colorme img {
   display: block; /* make the image a block-level element */
   margin: 0 auto; /* center the image horizontally */
   max-width: 100%; /* make the image responsive */
-}
-main .colorme1 {
-  background-color: tan;
-  border-radius: 1px solid green;
-  padding: 1rem;
 }
 main .small-0 {
   flex-basis: 0%;
@@ -481,12 +490,17 @@ main .small-12 {
   flex-basis: 100%;
 }
 main .jumbotron {
-  background-color: blue;
+  background-color: #013440;
   color: white;
+  margin: 0;
 }
-main .jumbotron p {
+main .jumbotron h3 {
   font-size: 200%;
   padding: 2rem 0;
+  margin: 0;
+}
+main .jumbotron h3:hover {
+  background-color: #37a65e;
 }
 main .my-button {
   background-color: #013440; /* set the button's background color */
@@ -504,50 +518,24 @@ main .my-button {
 main .my-button:hover {
   background-color: #3e8e41; /* change the button's background color on hover */
 }
+main .my-button1 {
+  background-color: #013440; /* set the button's background color */
+  border: none; /* remove the button's border */
+  color: white; /* set the button's text color */
+  padding: 12px 24px; /* set the button's padding */
+  text-align: center; /* center the button's text */
+  text-decoration: none; /* remove the button's underline */
+  display: inline-block; /* display the button as an inline-block element */
+  font-size: 12px; /* set the font size of the button's text */
+  margin: 0; /* set the button's margin */
+  cursor: pointer; /* add a pointer cursor to the button */
+  width: 100%;
+}
+main .my-button1:hover {
+  background-color: #3e8e41; /* change the button's background color on hover */
+}
 
 /*----------- Socials --------------*/
-div.social {
-  background-color: black;
-  display: flex;
-  padding: 1rem 0;
-}
-
-div.social a {
-  flex-basis: 25%;
-  text-align: center;
-  color: white;
-  font-size: 3rem;
-  text-decoration: none;
-}
-
-/*----------- CTA Button --------------*/
-.flexbutton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.flexbutton h4 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #007bff;
-  border-radius: 4px;
-  text-align: center;
-  padding: 2px 4px;
-  transition: background-color 0.2s ease-in-out;
-  text-decoration: none;
-}
-
-.flexbutton a {
-  text-decoration: none;
-}
-
-.flexbutton:hover h4 {
-  background-color: #0056b3;
-}
-
 /*----------- FOOTER --------------*/
 div#footerWrapper {
   grid-row-start: 3;
@@ -639,7 +627,6 @@ footer {
     flex-wrap: wrap;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border: 1px solid black;
     width: 100%;
     gap: 1vw;
     justify-content: center;
